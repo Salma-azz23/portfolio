@@ -34,9 +34,8 @@ export class HomeComponent {
     { name: 'GitHub', url: 'https://github.com/Salma-azz23', icon: faGithub },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/salma-azouzout-98a0592b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', icon: faLinkedin },
     { name: 'Phone', url: 'tel:+212699730733', icon: faPhone },
-    { name: 'WhatsApp', icon: faWhatsapp, link: 'https://wa.me/0699730733' },
-    { name: 'Email', icon: faEnvelope, link: 'mailto:salma.azouzout03@gmail.com' },
-    
+    { name: 'WhatsApp', icon: faWhatsapp, url: "https://wa.me/0699730733" }, // Lien WhatsApp
+    { name: 'Email', icon: faEnvelope, url: "mailto:salma.azouzout03@gmail.com" }, // Lien Email
   ];
 
   generateRandomStyle() {
