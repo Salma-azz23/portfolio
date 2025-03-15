@@ -1,0 +1,83 @@
+<section id="experience" class="experience-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-word">Professional & Extracurricular Experience</span>
+      </h2>
+  
+      <!-- Contenu Principal -->
+      <div class="experience-grid">
+        <!-- Carte de Stage à Al Omrane (à gauche) -->
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="company-logo">
+              <img src="assets/logos/alomrane.png" alt="Al Omrane Logo">
+            </div>
+            <h4 class="experience-title">Internship at Al Omrane Oriental - July 2024</h4>
+          </div>
+          <div class="experience-image">
+            <img src="assets/images/alomrane.jpg" alt="Stage at Al Omrane" class="zoom-image" (click)="openImage('assets/images/alomrane.jpg')">
+          </div>
+          <div class="experience-content">
+            <div class="experience-description">
+              <strong>Key Achievements:</strong>
+              <ul>
+                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Introduction to SAP and ERP systems.</li>
+                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Observation of integration processes.</li>
+                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Gained a global perspective on ERP.</li>
+                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Installation and configuration of WordPress.</li>
+                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Creation of a landing page using HTML, CSS, and Tailwind CSS.</li>
+              </ul>
+            </div>
+            <a href="assets/files/rapport-de-stage.pdf" target="_blank" class="experience-link">
+              <fa-icon [icon]="faFilePdf"></fa-icon>
+              View Full Report
+            </a>
+          </div>
+        </div>
+  
+        <!-- Expériences Parascolaires (à droite) -->
+        <div class="experience-card">
+          <!-- Carte ENSAO Reporters -->
+          <div class="club-card">
+            <div class="club-logo">
+              <img src="assets/logos/reporters.png" alt="ENSAO Reporters Logo">
+            </div>
+            <div class="club-info">
+              <h4 class="club-title">ENSAO Reporters - General Secretary</h4>
+              <div class="club-description">
+                <strong>Key Responsibilities:</strong>
+                <ul>
+                  <li><fa-icon [icon]="faTasks"></fa-icon> Managed club operations and communications.</li>
+                  <li><fa-icon [icon]="faTasks"></fa-icon> Organized the "First Regional Meeting on Content Creation."</li>
+                  <li><fa-icon [icon]="faTasks"></fa-icon> Led content creation competitions.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Carte Club Génie Informatique -->
+          <div class="club-card">
+            <div class="club-logo">
+              <img src="assets/logos/gii.png" alt="Club Génie Informatique Logo">
+            </div>
+            <div class="club-info">
+              <h4 class="club-title">Club Génie Informatique - Design Cell Leader</h4>
+              <div class="club-description">
+                <strong>Key Responsibilities:</strong>
+                <ul>
+                  <li><fa-icon [icon]="faTasks"></fa-icon> Led the design and digital decoration team.</li>
+                  <li><fa-icon [icon]="faTasks"></fa-icon> Created designs for club events and promotions.</li>
+                  <li><fa-icon [icon]="faTasks"></fa-icon> Collaborated with other teams for cohesive branding.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Overlay pour l'image en plein écran -->
+    <div id="image-overlay" class="image-overlay" (click)="closeImage()">
+      <img id="fullsize-image" src="" alt="Fullsize Image">
+    </div>
+  </section>

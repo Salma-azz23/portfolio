@@ -1,1 +1,86 @@
-<p>projects works!</p>
+<section id="projects" class="projects-section">
+    <div class="floating-icons">
+      <fa-icon [icon]="faCode" class="floating-icon"></fa-icon>
+      <fa-icon [icon]="faLaptopCode" class="floating-icon"></fa-icon>
+      <fa-icon [icon]="faServer" class="floating-icon"></fa-icon>
+      <fa-icon [icon]="faDatabase" class="floating-icon"></fa-icon>
+      <fa-icon [icon]="faMobileAlt" class="floating-icon"></fa-icon>
+    </div>
+  
+    <!-- Icônes 3D flottantes -->
+    <div class="floating-dev-icons">
+      <fa-icon [icon]="faCode" class="floating-dev-icon"></fa-icon>
+      <fa-icon [icon]="faLaptopCode" class="floating-dev-icon"></fa-icon>
+      <fa-icon [icon]="faServer" class="floating-dev-icon"></fa-icon>
+      <fa-icon [icon]="faDatabase" class="floating-dev-icon"></fa-icon>
+      <fa-icon [icon]="faMobileAlt" class="floating-dev-icon"></fa-icon>
+      <fa-icon [icon]="faCogs" class="floating-dev-icon"></fa-icon>
+      <fa-icon [icon]="faNetworkWired" class="floating-dev-icon"></fa-icon>
+      <fa-icon [icon]="faCloud" class="floating-dev-icon"></fa-icon>
+    </div>
+  
+  
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-word">My Projects</span>
+      </h2>
+  
+      <!-- Carrousel -->
+      <div class="carousel">
+        <!-- Boutons de navigation -->
+        <button class="carousel-button prev" (click)="prevSlide()">
+          <fa-icon [icon]="faChevronLeft"></fa-icon>
+        </button>
+  
+        <!-- Slides -->
+        <div class="slides">
+          <div *ngFor="let project of projects; let i = index" class="slide" [class.active]="i === activeIndex">
+            <div class="project-card">
+              <div class="project-image" (click)="openModal(project.image)">
+                <img [src]="project.image" [alt]="project.title" />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">{{ project.title }}</h3>
+                <div class="project-description">
+                  <p [class.collapsed]="!project.showFullDescription">
+                    {{ project.description }}
+                  </p>
+                  <button class="see-more-button" (click)="toggleDescription(project)" *ngIf="project.description.length > 150">
+                    {{ project.showFullDescription ? 'Voir moins' : 'Voir plus' }}
+                  </button>
+                </div>
+                <div class="project-technologies">
+                  <fa-icon *ngFor="let tech of project.technologies" [icon]="tech" class="tech-icon"></fa-icon>
+                </div>
+                <div class="project-links">
+                <a [href]="project.githubLink" target="_blank" class="project-link">
+                  <fa-icon [icon]="faGithub"></fa-icon>
+                  View on GitHub
+                </a>
+                <button *ngIf="project.demoLink" class="demo-button" (click)="openDemo(project.demoLink)">
+                  <fa-icon [icon]="faPlayCircle"></fa-icon>
+                  View Demo
+                </button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+  
+        <button class="carousel-button next" (click)="nextSlide()">
+          <fa-icon [icon]="faChevronRight"></fa-icon>
+        </button>
+      </div>
+  
+      <!-- Indicateurs de Slide -->
+      <div class="slide-indicators">
+        <span *ngFor="let project of projects; let i = index" [class.active]="i === activeIndex" (click)="goToSlide(i)"></span>
+      </div>
+    </div>
+  
+    <div class="modal" *ngIf="isModalOpen" (click)="closeModal()">
+      <div class="modal-content">
+        <img [src]="selectedImage" alt="Selected Project Image" />
+      </div>
+    </div>
+  </section>

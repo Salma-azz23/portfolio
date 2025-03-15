@@ -1,1 +1,49 @@
-<p>skills works!</p>
+<section id="skills" class="skills-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-word">Skills & Tools</span>
+      </h2>
+  
+      <!-- Onglets pour Skills et Tools -->
+      <div class="tabs">
+        <button
+          class="tab-button"
+          [ngClass]="{ 'active': activeTab === 'skills' }"
+          (click)="setActiveTab('skills')"
+        >
+          Skills
+        </button>
+        <button
+          class="tab-button"
+          [ngClass]="{ 'active': activeTab === 'tools' }"
+          (click)="setActiveTab('tools')"
+        >
+          Tools
+        </button>
+      </div>
+  
+      <!-- Contenu des onglets -->
+      <div class="tab-content">
+        <!-- Skills -->
+        <div *ngIf="activeTab === 'skills'" class="skills-grid">
+          <div *ngFor="let skill of skills" class="skill-item">
+            <div class="card">
+              
+              <fa-icon [icon]="skill.icon" class="skill-icon"></fa-icon>
+              <span class="skill-name">{{ skill.name }}</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Tools -->
+        <div *ngIf="activeTab === 'tools'" class="tools-grid">
+          <div *ngFor="let tool of tools" class="tool-item">
+            <div class="card">
+              <fa-icon [icon]="tool.icon" class="tool-icon"></fa-icon>
+              <span class="tool-name">{{ tool.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,215 @@
+.experience-section {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #0f172a, #0f172a);
+    color: #ffffff;
+  
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+  
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        background: linear-gradient(45deg, #4f46e5, #10b981);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+  
+      .experience-grid {
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: column;
+  
+        @media (min-width: 768px) {
+          flex-direction: row;
+        }
+  
+        .experience-card {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 12px;
+          padding: 1rem;
+          flex: 1;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          max-width: 400px; // Réduire la taille des cartes
+          margin: 0 auto; // Centrer les cartes
+  
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+          }
+  
+          .experience-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+  
+            .company-logo {
+              width: 30px; // Réduire la taille du logo
+              height: 30px;
+              border-radius: 50%;
+              overflow: hidden;
+  
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+  
+            .experience-title {
+              font-size: 1rem; // Réduire la taille du titre
+              font-weight: 600;
+              color: #ffffff;
+            }
+          }
+  
+          .experience-image {
+            width: 100%;
+            height: 120px; // Réduire la hauteur de l'image
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+  
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              cursor: pointer;
+              transition: transform 0.3s ease;
+  
+              &:hover {
+                transform: scale(1.05);
+              }
+            }
+          }
+  
+          .experience-content {
+            .experience-description {
+              font-size: 0.8rem; // Réduire la taille du texte
+              color: #94a3b8;
+              line-height: 1.6;
+  
+              ul {
+                padding-left: 1rem;
+                margin: 0;
+  
+                li {
+                  margin-bottom: 0.5rem;
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+  
+                  fa-icon {
+                    color: #4f46e5;
+                  }
+                }
+              }
+            }
+  
+            .experience-link {
+              display: inline-flex;
+              align-items: center;
+              gap: 0.5rem;
+              color: #4f46e5;
+              text-decoration: none;
+              font-weight: 600;
+              margin-top: 1rem;
+  
+              &:hover {
+                color: #10b981;
+              }
+  
+              fa-icon {
+                font-size: 0.8rem; // Réduire la taille de l'icône
+              }
+            }
+          }
+        }
+  
+        .club-card {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 12px;
+          padding: 1rem;
+          margin-bottom: 1rem;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+          }
+  
+          .club-logo {
+            width: 30px; // Réduire la taille du logo
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+  
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+  
+          .club-info {
+            .club-title {
+              font-size: 0.9rem; // Réduire la taille du titre
+              font-weight: 600;
+              color: #ffffff;
+              margin-bottom: 0.5rem;
+            }
+  
+            .club-description {
+              font-size: 0.75rem; // Réduire la taille du texte
+              color: #94a3b8;
+              line-height: 1.5;
+  
+              ul {
+                padding-left: 1rem;
+                margin: 0;
+  
+                li {
+                  margin-bottom: 0.5rem;
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+  
+                  fa-icon {
+                    color: #4f46e5;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .image-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  
+    &.active {
+      display: flex;
+    }
+  
+    img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+  }

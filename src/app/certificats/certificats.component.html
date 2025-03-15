@@ -1,0 +1,26 @@
+<section id="certificats" class="certificates-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-word">My Certificates</span>
+      </h2>
+  
+      <!-- Grille des certificats -->
+      <div class="certificates-grid">
+        <div *ngFor="let certificate of certificates" class="certificate-card">
+          <div class="certificate-image">
+            <img [src]="certificate.image" [alt]="certificate.title" />
+            <div class="overlay">
+              <h3 class="certificate-title">{{ certificate.title }}</h3>
+              <p class="certificate-description">{{ certificate.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal pour afficher le certificat en grand -->
+    <div class="modal" *ngIf="isCertificateModalOpen" (click)="closeCertificateModal()">
+      <div class="modal-content">
+        <img [src]="selectedCertificateImage" alt="Selected Certificate Image" />
+      </div>
+    </div>
+  </section>

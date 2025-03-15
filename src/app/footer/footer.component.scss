@@ -1,0 +1,23 @@
+.portfolio-footer {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);  
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .footer-text {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin: 0;
+  
+      strong {
+        color: #4f46e5;
+        font-weight: 600;
+      }
+    }
+  }

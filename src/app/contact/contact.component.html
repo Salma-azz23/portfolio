@@ -1,0 +1,38 @@
+<section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-word">Contact Me</span>
+      </h2>
+  
+      <div class="contact-message">
+        <p>Let's get in touch! 👋</p>
+      </div>
+    
+  
+      <div class="contact-content">
+        <!-- Icônes de contact -->
+        <div class="contact-icons">
+          <a
+            *ngFor="let item of contactItems"
+            [href]="item.link"
+            target="_blank"
+            class="contact-icon"
+            [ngClass]="'icon-' + item.name.toLowerCase()"
+          >
+            <fa-icon [icon]="item.icon" class="icon"></fa-icon>
+          </a>
+        </div>
+  
+        <!-- Lien vers le formulaire -->
+        <div class="form-link">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScCslGF9y2j31gdl6SphyiFxQSDTEdcvlhT7pXqVF1vUaHtUQ/viewform?usp=header"
+            target="_blank"
+            class="form-button"
+          >
+            connect with me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
