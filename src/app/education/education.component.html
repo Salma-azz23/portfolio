@@ -1,1 +1,41 @@
-<p>education works!</p>
+<section id="education" class="education-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-word">Education</span>
+      </h2>
+  
+      <!-- Conteneur horizontal pour les cartes -->
+      <div class="horizontal-timeline">
+        <!-- Carte Étape -->
+        <div
+          *ngFor="let item of educationItems; let i = index"
+          class="timeline-card"
+          [ngClass]="{ 'expanded': selectedCardIndex === i }"
+          (click)="toggleCard(i)"
+          [@fadeIn]
+        >
+          <!-- Icône 3D Interactive -->
+          <div class="timeline-icon-3d" (mouseenter)="hoverIcon($event)" (mouseleave)="resetIcon($event)">
+            <fa-icon [icon]="item.icon" class="icon-3d"></fa-icon>
+          </div>
+  
+          <!-- Contenu de la carte -->
+          <div class="card-content">
+            <h3 class="timeline-date">{{ item.date }}</h3>
+            <h4 class="timeline-title">{{ item.title }}</h4>
+            <p class="timeline-institution">{{ item.institution }}</p>
+  
+            <!-- Détails supplémentaires (visibles uniquement lorsque la carte est étendue) -->
+            <div *ngIf="selectedCardIndex === i" class="timeline-details">
+              <ul>
+                <li *ngFor="let detail of item.details">{{ detail }}</li>
+              </ul>
+            </div>
+          </div>
+  
+          <!-- Effet de fond animé -->
+          <div class="card-background"></div>
+        </div>
+      </div>
+    </div>
+  </section>

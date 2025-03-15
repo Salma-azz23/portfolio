@@ -1,0 +1,175 @@
+.education-section {
+    padding: 4rem 0;
+    background: #0f172a;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+  
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem; // Augmenter l'espace sous le titre
+        text-align: center;
+        background: linear-gradient(45deg, #4f46e5, #10b981);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: float 3s infinite ease-in-out;
+  
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+          margin-bottom: 2rem; // Ajuster l'espace pour les écrans plus petits
+        }
+      }
+  
+      .horizontal-timeline {
+        display: flex;
+        gap: 1.5rem; // Augmenter l'espace entre les cartes
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        justify-content: center; // Centrer les cartes horizontalement
+        width: 100%;
+  
+        @media (max-width: 768px) {
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem; // Ajuster l'espace pour les écrans plus petits
+        }
+  
+        .timeline-card {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 12px;
+          padding: 1rem;
+          width: 240px; // Taille réduite
+          height: auto;
+          flex: 0 0 auto;
+          transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+          cursor: pointer;
+          overflow: hidden;
+          position: relative;
+          perspective: 1000px;
+  
+          &:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.5);
+            background: rgba(255, 255, 255, 0.1);
+          }
+  
+          .timeline-icon-3d {
+            text-align: center;
+            margin-bottom: 1rem;
+  
+            .icon-3d {
+              font-size: 2rem; // Taille réduite
+              color: #4f46e5;
+              transition: transform 0.5s ease, color 0.3s ease;
+              transform-style: preserve-3d;
+            }
+          }
+  
+          .card-content {
+            position: relative;
+            z-index: 2;
+          }
+  
+          .timeline-date {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #4f46e5;
+            margin-bottom: 0.5rem;
+          }
+  
+          .timeline-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+          }
+  
+          .timeline-institution {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 1rem;
+          }
+  
+          .timeline-details {
+            display: none;
+            ul {
+              list-style: none;
+              padding: 0;
+  
+              li {
+                font-size: 0.75rem;
+                color: #94a3b8;
+                margin-bottom: 0.5rem;
+                position: relative;
+                padding-left: 1rem;
+  
+                &::before {
+                  content: '•';
+                  position: absolute;
+                  left: 0;
+                  color: #4f46e5;
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+  
+          &.expanded {
+            height: 380px;
+            background: rgba(255, 255, 255, 0.1);
+          }
+  
+          &.expanded .timeline-details {
+            display: block;
+            animation: fadeInDetails 0.5s ease;
+          }
+  
+          .card-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(79, 70, 229, 0.2), transparent);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 1;
+          }
+  
+          &:hover .card-background {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  @keyframes rotate3d {
+    0% { transform: rotateY(0); }
+    100% { transform: rotateY(360deg); }
+  }
+  
+  @keyframes fadeInDetails {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .icon-3d:hover {
+    animation: rotate3d 2s infinite linear;
+    color: #10b981;
+  }
