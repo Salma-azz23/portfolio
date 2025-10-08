@@ -88,7 +88,7 @@ export class ProjectsComponent {
       image: 'assets/images/CERBO.png',
       technologies: [faReact, faLeaf, faDatabase],
       githubLink: 'https://github.com/fatima236/cerbo',
-      demoLink: 'assets/videos/Démonstration-CEBO.mp4',
+      demoLink: 'https://drive.google.com/file/d/1vtpsYu-wWceK2tVJW414f8wq8OlMSdrk/view?usp=sharing',
       showFullDescription: false,
     },
     {
