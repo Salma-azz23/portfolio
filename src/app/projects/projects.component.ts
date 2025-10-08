@@ -82,6 +82,16 @@ export class ProjectsComponent {
       showFullDescription: false,
     },
     {
+      title: 'CERBO',
+      description:
+        'Development of a Centralized Web Platform for the CERBO',
+      image: 'assets/images/CERBO.png',
+      technologies: [faReact, faLeaf, faDatabase],
+      githubLink: 'https://github.com/fatima236/cerbo',
+      demoLink: 'assets/videos/Démonstration-CEBO.mp4',
+      showFullDescription: false,
+    },
+    {
       title: 'Hirafi',
       description:
         'Creation of a web platform connecting artisans and clients through a responsive interface and an intelligent chatbot.',

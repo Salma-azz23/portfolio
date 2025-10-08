@@ -45,7 +45,7 @@ export class EducationComponent {
       icon: faSchool,
     },
     {
-      date: '2023 - 2024',
+      date: '2023 - 2026',
       title: 'CYCLE D’INGENIEUR (Génie Informatique)',
       institution: 'École Nationale des Sciences Appliquées',
       details: [
