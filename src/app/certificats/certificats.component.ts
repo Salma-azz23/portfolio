@@ -17,6 +17,11 @@ export class CertificatsComponent {
 
   // Liste des certificats
   certificates = [
+        {
+      title: 'Java SE 17 Developer',
+      description: 'ORACLE University',
+      image: 'assets/certificats/OCP.jpg',
+    },
     {
       title: 'Introduction to Networks course',
       description: 'Cisco Academy.',
@@ -41,6 +46,11 @@ export class CertificatsComponent {
       title: 'React Crash Course',
       description: 'Udemy',
       image: 'assets/certificats/react.jpg',
+    },
+        {
+      title: 'English Certificate',
+      description: 'EF SET ',
+      image: 'assets/certificats/EFSET.jpg',
     },
   ];
 

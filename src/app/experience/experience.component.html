@@ -1,113 +1,263 @@
 <section id="experience" class="experience-section">
-    <div class="container">
-      <h2 class="section-title">
-        <span class="title-word">Professional & Extracurricular Experience</span>
-      </h2>
-  
-      <!-- Contenu Principal -->
-      <div class="experience-grid">
-        <!-- Carte de Stage à Marketing Confort (iZemx) -->
-        <div class="experience-card">
-          <div class="experience-header">
-            <div class="company-logo">
-              <img src="assets/logos/marketingConfort.jpg" alt="Marketing Confort (iZemx) Logo">
-            </div>
-            <h4 class="experience-title">Full-Stack Developer Intern - Marketing Confort (iZemx)<br>July 2025 – August 2025</h4>
+  <div class="container">
+    <h2 class="section-title">
+      <span class="title-word">Professional & Extracurricular Experience</span>
+    </h2>
+
+    <!-- Contenu Principal -->
+    <div class="experience-grid">
+      <!-- Carte de Stage à Marketing Confort (iZemx) -->
+      <div class="experience-card">
+        <div class="experience-header">
+          <div class="company-logo">
+            <img
+              src="assets/logos/marketingConfort.jpg"
+              alt="Marketing Confort (iZemx) Logo"
+            />
           </div>
-          <div class="experience-image">
-            <img src="assets/images/marketing-confort.jpg" alt="Stage at Marketing Confort" class="zoom-image" (click)="openImage('assets/images/marketing-confort.jpg')">
+          <h4 class="experience-title">
+            Full-Stack Developer Intern - Marketing Confort (iZemx)<br />July
+            2025 – August 2025
+          </h4>
+        </div>
+        <div class="experience-image">
+          <img
+            src="assets/images/marketing-confort.jpg"
+            alt="Stage at Marketing Confort"
+            class="zoom-image"
+            (click)="openImage('assets/images/marketing-confort.jpg')"
+          />
+        </div>
+        <div class="experience-content">
+          <div class="experience-description">
+            <strong>Key Achievements:</strong>
+            <ul>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Developed new
+                features for Check and Go web application using Next.js and
+                Spring Boot
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Implemented
+                authentication and access management solution with Keycloak
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Contributed to
+                companion mobile app development using React Native
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Utilized GitLab for
+                version control, merge requests and CI/CD pipelines
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Integrated into
+                Agile/Scrum team (daily meetings, sprints planning)
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Gained expertise in
+                full-stack development and DevOps practices
+              </li>
+            </ul>
           </div>
-          <div class="experience-content">
-            <div class="experience-description">
-              <strong>Key Achievements:</strong>
+          <a
+            href="/assets/images/ATTESTATION-DE-STAGE.jpg"
+            target="_blank"
+            class="experience-link"
+          >
+            <fa-icon [icon]="faFilePdf"></fa-icon>
+            View Certificate of Internship
+          </a>
+        </div>
+      </div>
+
+      <!-- CERBO -->
+      <div class="experience-card">
+        <div class="experience-header">
+          <div class="company-logo">
+            <img src="assets/logos/FMPO.jpg" alt="CERBO Project Logo" />
+          </div>
+          <h4 class="experience-title">
+            Full-Stack Developer - CERBO Project<br />ENSA Oujda & Faculty of
+            Medicine of Oujda<br />September 2024 – Present
+          </h4>
+        </div>
+        <div class="experience-image">
+          <img
+            src="assets/images/CERBO.jpg"
+            alt="CERBO Project"
+            class="zoom-image"
+            (click)="openImage('assets/images/cerbo-project.jpg')"
+          />
+        </div>
+        <div class="experience-content">
+          <div class="experience-description">
+            <strong>Key Achievements:</strong>
+            <ul>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Designed and
+                developed a web platform for submission and tracking of
+                biomedical research protocols
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Implemented
+                authentication and authorization system (roles: admin,
+                researcher, validator)
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Created REST API with
+                Spring Boot for data and workflow management
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Developed interactive
+                frontend interface with React.js
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Modeled and
+                administered relational database using MySQL
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Implemented security
+                best practices and data logging
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Consolidated
+                full-stack development skills in a demanding professional
+                context
+              </li>
+            </ul>
+          </div>
+          <a
+            href="/assets/images/Attestation de stage-CERBO.jpg"
+            target="_blank"
+            class="experience-link"
+          >
+            <fa-icon [icon]="faFilePdf"></fa-icon>
+            View Certificate of Internship
+          </a>
+        </div>
+      </div>
+
+      <!-- Carte de Stage à Al Omrane -->
+      <div class="experience-card">
+        <div class="experience-header">
+          <div class="company-logo">
+            <img src="assets/logos/alomrane.png" alt="Al Omrane Logo" />
+          </div>
+          <h4 class="experience-title">
+            Initiation Internship - Al Omrane Oriental<br />July 2024
+          </h4>
+        </div>
+        <div class="experience-image">
+          <img
+            src="assets/images/alomrane.jpg"
+            alt="Stage at Al Omrane"
+            class="zoom-image"
+            (click)="openImage('assets/images/alomrane.jpg')"
+          />
+        </div>
+        <div class="experience-content">
+          <div class="experience-description">
+            <strong>Key Achievements:</strong>
+            <ul>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Introduction to SAP
+                and ERP systems
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Observation of
+                integration processes
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Gained a global
+                perspective on ERP
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Installation and
+                configuration of WordPress
+              </li>
+              <li>
+                <fa-icon [icon]="faCheckCircle"></fa-icon> Creation of a landing
+                page using HTML, CSS, and Tailwind CSS
+              </li>
+            </ul>
+          </div>
+          <a
+            href="/assets/images/attestation_stage_ALOMRANE.jpg"
+            target="_blank"
+            class="experience-link"
+          >
+            <fa-icon [icon]="faFilePdf"></fa-icon>
+            View Certificate of Internship
+          </a>
+        </div>
+      </div>
+
+      <!-- Expériences Parascolaires -->
+      <div class="experience-card">
+        <!-- Carte ENSAO Reporters -->
+        <div class="club-card">
+          <div class="club-logo">
+            <img src="assets/logos/reporters.png" alt="ENSAO Reporters Logo" />
+          </div>
+          <div class="club-info">
+            <h4 class="club-title">ENSAO Reporters - General Secretary</h4>
+            <div class="club-description">
+              <strong>Key Responsibilities:</strong>
               <ul>
-                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Developed new features for Check and Go web application using Next.js and Spring Boot</li>
-                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Implemented authentication and access management solution with Keycloak</li>
-                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Contributed to companion mobile app development using React Native</li>
-                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Utilized GitLab for version control, merge requests and CI/CD pipelines</li>
-                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Integrated into Agile/Scrum team (daily meetings, sprints planning)</li>
-                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Gained expertise in full-stack development and DevOps practices</li>
+                <li>
+                  <fa-icon [icon]="faTasks"></fa-icon> Managed club operations
+                  and communications
+                </li>
+                <li>
+                  <fa-icon [icon]="faTasks"></fa-icon> Organized the "First
+                  Regional Meeting on Content Creation"
+                </li>
+                <li>
+                  <fa-icon [icon]="faTasks"></fa-icon> Led content creation
+                  competitions
+                </li>
               </ul>
             </div>
-            <a href="/assets/images/ATTESTATION-DE-STAGE.jpg" target="_blank" class="experience-link">
-              <fa-icon [icon]="faFilePdf"></fa-icon>
-              View Certificate of Internship
-            </a>
           </div>
         </div>
 
-        <!-- Carte de Stage à Al Omrane -->
-        <div class="experience-card">
-          <div class="experience-header">
-            <div class="company-logo">
-              <img src="assets/logos/alomrane.png" alt="Al Omrane Logo">
-            </div>
-            <h4 class="experience-title">Initiation Internship - Al Omrane Oriental<br>July 2024</h4>
+        <!-- Carte Club Génie Informatique -->
+        <div class="club-card">
+          <div class="club-logo">
+            <img
+              src="assets/logos/gii.png"
+              alt="Club Génie Informatique Logo"
+            />
           </div>
-          <div class="experience-image">
-            <img src="assets/images/alomrane.jpg" alt="Stage at Al Omrane" class="zoom-image" (click)="openImage('assets/images/alomrane.jpg')">
-          </div>
-          <div class="experience-content">
-            <div class="experience-description">
-              <strong>Key Achievements:</strong>
+          <div class="club-info">
+            <h4 class="club-title">
+              Club Génie Informatique - Design Cell Leader
+            </h4>
+            <div class="club-description">
+              <strong>Key Responsibilities:</strong>
               <ul>
-                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Introduction to SAP and ERP systems</li>
-                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Observation of integration processes</li>
-                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Gained a global perspective on ERP</li>
-                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Installation and configuration of WordPress</li>
-                <li><fa-icon [icon]="faCheckCircle"></fa-icon> Creation of a landing page using HTML, CSS, and Tailwind CSS</li>
+                <li>
+                  <fa-icon [icon]="faTasks"></fa-icon> Led the design and
+                  digital decoration team
+                </li>
+                <li>
+                  <fa-icon [icon]="faTasks"></fa-icon> Created designs for club
+                  events and promotions
+                </li>
+                <li>
+                  <fa-icon [icon]="faTasks"></fa-icon> Collaborated with other
+                  teams for cohesive branding
+                </li>
               </ul>
-            </div>
-            <a href="/assets/images/attestation_stage_ALOMRANE.jpg" target="_blank" class="experience-link">
-              <fa-icon [icon]="faFilePdf"></fa-icon>
-              View Certificate of Internship
-            </a>
-          </div>
-        </div>
-  
-        <!-- Expériences Parascolaires -->
-        <div class="experience-card">
-          <!-- Carte ENSAO Reporters -->
-          <div class="club-card">
-            <div class="club-logo">
-              <img src="assets/logos/reporters.png" alt="ENSAO Reporters Logo">
-            </div>
-            <div class="club-info">
-              <h4 class="club-title">ENSAO Reporters - General Secretary</h4>
-              <div class="club-description">
-                <strong>Key Responsibilities:</strong>
-                <ul>
-                  <li><fa-icon [icon]="faTasks"></fa-icon> Managed club operations and communications</li>
-                  <li><fa-icon [icon]="faTasks"></fa-icon> Organized the "First Regional Meeting on Content Creation"</li>
-                  <li><fa-icon [icon]="faTasks"></fa-icon> Led content creation competitions</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-  
-          <!-- Carte Club Génie Informatique -->
-          <div class="club-card">
-            <div class="club-logo">
-              <img src="assets/logos/gii.png" alt="Club Génie Informatique Logo">
-            </div>
-            <div class="club-info">
-              <h4 class="club-title">Club Génie Informatique - Design Cell Leader</h4>
-              <div class="club-description">
-                <strong>Key Responsibilities:</strong>
-                <ul>
-                  <li><fa-icon [icon]="faTasks"></fa-icon> Led the design and digital decoration team</li>
-                  <li><fa-icon [icon]="faTasks"></fa-icon> Created designs for club events and promotions</li>
-                  <li><fa-icon [icon]="faTasks"></fa-icon> Collaborated with other teams for cohesive branding</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  
-    <!-- Overlay pour l'image en plein écran -->
-    <div id="image-overlay" class="image-overlay" (click)="closeImage()">
-      <img id="fullsize-image" src="" alt="Fullsize Image">
-    </div>
+  </div>
+
+  <!-- Overlay pour l'image en plein écran -->
+  <div id="image-overlay" class="image-overlay" (click)="closeImage()">
+    <img id="fullsize-image" src="" alt="Fullsize Image" />
+  </div>
 </section>
